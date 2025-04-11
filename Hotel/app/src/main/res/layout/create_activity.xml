@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_create_activity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- 酒店名称输入框 -->
+    <EditText
+        android:id="@+id/editTextHotelName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Hotel Name" />
+
+    <!-- 酒店价格输入框 -->
+    <EditText
+        android:id="@+id/editTextHotelPrice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Price"
+        android:inputType="numberDecimal" />
+
+    <!-- 添加酒店按钮 -->
+    <Button
+        android:id="@+id/btnAddHotel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add Hotel" />
+
+</LinearLayout>

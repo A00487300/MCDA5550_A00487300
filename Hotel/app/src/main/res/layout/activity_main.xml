@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/title_text_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="welcome to hotel platform"
+                android:layout_marginTop="60sp"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/checkin_text_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Enter Check-in Date: "
+                android:layout_marginTop="20sp"
+                android:layout_marginStart="30sp"
+                android:gravity="start"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+
+                app:layout_constraintTop_toBottomOf="@id/title_text_view"/>
+
+            <DatePicker
+                android:id="@+id/checkin_calendar_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/checkin_text_view"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="5sp"
+                android:background="#F5F5FF"
+                />
+
+            <TextView
+                android:id="@+id/checkout_text_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Enter Check-out Date:"
+                app:layout_constraintTop_toBottomOf="@id/checkin_calendar_view"
+                android:layout_marginTop="5sp"
+                android:layout_marginStart="30sp"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                />
+
+            <DatePicker
+                android:id="@+id/etCheckOut"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/checkout_text_view"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="5sp"
+                android:background="#F5F5FF"/>
+
+            <EditText
+                android:id="@+id/etGuests"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="Number of guests"
+                android:inputType="number"
+                app:layout_constraintTop_toBottomOf="@+id/etCheckOut"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                android:layout_marginTop="16dp"/>
+
+            <EditText
+                android:id="@+id/etUserName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="Your Name"
+                app:layout_constraintTop_toBottomOf="@+id/etGuests"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                android:layout_marginTop="16dp"/>
+
+            <Button
+                android:id="@+id/btnSearch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Search"
+                app:layout_constraintTop_toBottomOf="@+id/etUserName"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                android:layout_marginTop="16dp"/>
+
+            <Button
+                android:id="@+id/addHotel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Add Hotel"
+                app:layout_constraintTop_toBottomOf="@+id/btnSearch"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                android:layout_marginTop="16dp"/>
+
+            <Button
+                android:id="@+id/checkReservation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Check Reservation"
+                app:layout_constraintTop_toBottomOf="@+id/addHotel"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                android:layout_marginTop="16dp"/>
+
+
+            <FrameLayout
+                android:id="@+id/fragment_container"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
