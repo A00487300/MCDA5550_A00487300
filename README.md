@@ -6,7 +6,7 @@ This is a RESTful API built with Django + Django Rest Framework, deployed on AWS
 
 ## Run
 
-1. Visit: `http://http://3.99.216.105/api/hotels/`
+1. Visit: `http://3.99.216.105/api/hotels/`
 2. Visit: `http://3.99.216.105/api/reservationConfirmation/`
 
 ## Use with Postman
